@@ -1,0 +1,124 @@
+:root{  /*Declaração de variáveis para reutilização das cores */
+    --vermelho:#E50914;
+    --preto:#141414;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/*Elementos Base*/
+
+body {
+    background: var(--preto);
+    font-family: Arial, Helvetica, sans-serif, Times, serif;
+    color: white;
+}   
+
+header .container{
+    display: flex;
+    flex-direction: row; /*default - joga para a linha*/
+    align-items: center;
+    justify-content: space-between; /*Espaço entre as tags h2 e nav*/
+}
+
+header .logo{
+    margin-left: 5px;
+    color: var(--vermelho);
+    font-family: 'Arial Black';
+    font-size: 40px;
+}
+
+header nav a {
+    text-decoration: none;
+    color: #AAA;
+    margin-right: 10px;
+}
+
+header nav a:hover{  /*Evento - mudança de cor da fonte*/ 
+    color: #fff;
+}
+
+/*Elementos do Filme principal*/
+
+
+.filme-principal{
+    font-size: 16px;
+    background: linear-gradient(rgba(0,0,0,.50),rgba(0,0,0,.50)), url('../img/houseofcards.jpg') no-repeat ;
+    background-size:cover;
+    height:600px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.filme-principal .descricao {
+    margin-top: 10px;
+    margin-bottom: 40px;
+}
+
+.filme-principal .titulo{
+    margin-top: 15%;
+    font-size: 40px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.botao {
+    background-color: rgba(0, 0, 0, .50);
+    border: none;
+    color: white;
+    padding: 15px 30px;
+    margin-right: 15px;
+    font-size: 12px;
+    cursor: pointer;
+    transition: .5s ease all;
+}
+
+.botao:hover {
+    background-color: white;
+    color: black;
+}
+
+.botao i {
+    margin-right: 5px;
+}
+
+.botao a{
+    text-decoration: none;
+    color: white;
+}
+
+.container {
+    margin-left: 20px;
+}
+
+.filme-principal .container{
+    width: 70%;
+}
+
+.box-filme {
+    height: 50%;
+    width: 50%;
+    display: block;
+    overflow: hidden;
+}
+
+.carousel-filmes {
+    margin-top: 5px;
+}
+
+.item {
+    max-width: 100%;
+    -moz-transition: all 0.3s;
+    -webkit-transition: all 0.3s;
+    transition: all 0.3s;
+}
+
+.item:hover {
+    -moz-transform: scale(1.1);
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+}
